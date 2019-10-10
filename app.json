@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Strike",
+    "slug": "strike",
+    "privacy": "public",
+    "sdkVersion": "35.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/list.png",
+    "splash": {
+      "image": "./assets/splash-list.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.cipilsoft.strike"
+    },
+    "android": {
+      "package": "com.cipilsoft.strike",
+      "permissions": []
+    }
+  }
+}
