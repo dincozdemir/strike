@@ -10,6 +10,6 @@ export default {
 
   },
   text: {
-    fontSize: 40,
+    fontSize: 36,
   }
 }

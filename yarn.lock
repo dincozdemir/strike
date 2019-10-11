@@ -1883,13 +1883,6 @@ apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
     ts-invariant "^0.4.0"
     tslib "^1.9.3"
 
-appr@dincozdemir/appr#master:
-  version "2.0.0"
-  resolved "https://codeload.github.com/dincozdemir/appr/tar.gz/6eaf697969e5c1c8c600a6c80406293eb06156d7"
-  dependencies:
-    expo-cli "^3.3.0"
-    request "^2.81.0"
-
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -4439,6 +4432,14 @@ expo-permissions@~7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-7.0.0.tgz#f4135c3cf8e49c673a9a714459a1eb2b40fe2092"
   integrity sha512-C+qyVz+pdZO4YpVR2HSC3gsBZg0Qb8brCFgzmDmWcAtgrOiHClaLPdhI2XtQuGh8ubXcKPUGZp++UCEGiG0Jxg==
+
+expo-release-maker@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/expo-release-maker/-/expo-release-maker-2.0.1.tgz#9f21d50296fb97a8d9f0a04aa3b9a4659418fd6c"
+  integrity sha512-U7aT/gZ2qvv/3FD24vIR8JPyKN6Zq38hf7DUkJdBGbBt4v6Ms1XZgszULzEIzABScNqbLjQlOzYHsDgMJM8KnA==
+  dependencies:
+    expo-cli "^3.3.0"
+    request "^2.81.0"
 
 expo-sqlite@~7.0.0:
   version "7.0.0"
