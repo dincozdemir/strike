@@ -8,5 +8,5 @@ branches:
   only:
     - release
 script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" == "release" ] || [ "$TRAVIS_BRANCH" == "release" ]; then yarn appr; fi'
+  - 'if [ "$TRAVIS_BRANCH" == "release" ]; then yarn appr; fi'
   
