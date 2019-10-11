@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "appr": "appr"
   },
   "dependencies": {
     "expo": "^35.0.0",
@@ -16,7 +17,8 @@
     "react-native-web": "^0.11.7"
   },
   "devDependencies": {
-    "babel-preset-expo": "^7.0.0"
+    "babel-preset-expo": "^7.0.0",
+    "appr": "dincozdemir/appr#master"
   },
   "private": true
 }
