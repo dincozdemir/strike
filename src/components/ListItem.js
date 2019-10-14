@@ -35,7 +35,7 @@ const ListItem = ({
           </TextInput>
         </View>
         <TouchableOpacity style={styles.deleteContainer} onPress={() => onDelete(item)}>
-          <MaterialIcons name="delete" size={40} color="#ccc" />
+          <MaterialIcons name="delete" size={40} color="#EB9797" />
         </TouchableOpacity>
       </View>
     </TouchableWithoutFeedback>
