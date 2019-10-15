@@ -11,5 +11,8 @@ export default {
   },
   text: {
     fontSize: 36,
+    maxHeight: 80,
+    flex: 1,
+    textAlign: 'center',
   }
 }

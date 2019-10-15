@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { StyleSheet, SafeAreaView, AsyncStorage, TouchableOpacity, Text, KeyboardAvoidingView } from 'react-native';
+import { View, Dimensions, StyleSheet, SafeAreaView, AsyncStorage, TouchableOpacity, Text, KeyboardAvoidingView, TouchableWithoutFeedback } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import ListItem from './ListItem';
 import NewItem from './NewItem';
@@ -34,7 +34,9 @@ const List = () => {
   }
 
   const updateItem = updateItem => {
-    updateList(list.map(item => item.id === updateItem.id ? { ...updateItem } : item));
+    if (updateItem && updateItem.value.length < 20) {
+      updateList(list.map(item => item.id === updateItem.id ? { ...updateItem } : item));
+    }
   }
 
   const deleteItem = deleteItem => {
@@ -50,32 +52,39 @@ const List = () => {
     updateList(list.filter(item => item.value !== ''))
   }
 
-  const onFocus = focusItem => {
+  const clearOthers = focusItem => {
     updateList(list.filter(item => item.value !== '' || item.id === focusItem.id))
   }
 
   return (
     <SafeAreaView>
-      <KeyboardAwareScrollView
-        extraScrollHeight={100}
-        enableOnAndroid={true}
-        keyboardShouldPersistTaps='handled'
-        resetScrollToCoords={{ x: 0, y: 0 }}
-      >
-        {list.map(item => (
-          <ListItem
-            key={item.id}
-            item={item}
-            onChange={updateItem}
-            onFocus={onFocus}
-            onDelete={deleteItem}
-          />
-        ))}
-        <TouchableOpacity onPress={clickAddItem}>
-          <NewItem />
-        </TouchableOpacity>
-      </KeyboardAwareScrollView>
-    </SafeAreaView>
+      <View style={{
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+      }}>
+        <TouchableWithoutFeedback onPress={() => { clearOthers({}); }}>
+          <KeyboardAwareScrollView
+            extraScrollHeight={100}
+            enableOnAndroid={true}
+            keyboardShouldPersistTaps='handled'
+            resetScrollToCoords={{ x: 0, y: 0 }}
+          >
+            {list.map(item => (
+              <ListItem
+                key={item.id}
+                item={item}
+                onChange={updateItem}
+                onFocus={clearOthers}
+                onDelete={deleteItem}
+              />
+            ))}
+            <TouchableOpacity onPress={clickAddItem}>
+              <NewItem />
+            </TouchableOpacity>
+          </KeyboardAwareScrollView>
+        </TouchableWithoutFeedback>
+      </View>
+    </SafeAreaView >
   );
 }
 
