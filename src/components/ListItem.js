@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { View, TextInput, Text, StyleSheet, TouchableWithoutFeedback, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -10,29 +10,32 @@ const ListItem = ({
   onFocus,
   onDelete,
 }) => {
-  const { id, value } = item;
+  const { id, value } = item; 
   const textRef = useRef(null);
-  const onPress = () => {
-    if(textRef.current){
-      textRef.current.focus();
-    }
+  const focus = () => {
+    textRef.current.focus();
   }
+  const textStyle = {
+    ...styles.text,
+    fontSize: value.length < 13 ? 36 : 28
+  }
+  useEffect(focus, []);
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback onPress={focus}>
       <View style={styles.container}>
         <View style={styles.textContainer}>
           <TextInput
             ref={textRef}
-            autoFocus
             underlineColorAndroid="transparent"
+            multiline
             autoCorrect={false}
             autoCapitalize="words"
             onChangeText={text => onChange({ id, value: text })}
             onFocus={() => onFocus(item)}
-            style={styles.text}
-          >
-            {value}
-          </TextInput>
+            style={textStyle}
+            numberOfLines={2}
+            value={value}
+          />
         </View>
         <TouchableOpacity style={styles.deleteContainer} onPress={() => onDelete(item)}>
           <MaterialIcons name="delete" size={40} color="#EB9797" />
