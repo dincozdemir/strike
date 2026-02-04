@@ -4433,10 +4433,10 @@ expo-permissions@~7.0.0:
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-7.0.0.tgz#f4135c3cf8e49c673a9a714459a1eb2b40fe2092"
   integrity sha512-C+qyVz+pdZO4YpVR2HSC3gsBZg0Qb8brCFgzmDmWcAtgrOiHClaLPdhI2XtQuGh8ubXcKPUGZp++UCEGiG0Jxg==
 
-expo-release-maker@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/expo-release-maker/-/expo-release-maker-2.0.1.tgz#9f21d50296fb97a8d9f0a04aa3b9a4659418fd6c"
-  integrity sha512-U7aT/gZ2qvv/3FD24vIR8JPyKN6Zq38hf7DUkJdBGbBt4v6Ms1XZgszULzEIzABScNqbLjQlOzYHsDgMJM8KnA==
+expo-release-maker@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/expo-release-maker/-/expo-release-maker-2.0.5.tgz#0574208d037c73a4ce461665d26c0aef7b02f36e"
+  integrity sha512-Qh5o8h7JNz+5K81AQH9kTFQYs4uyYdIfwqeonplNrUu0keASV+vUfSBKmCUm8Dt2Sz8J/ggybfiRyam3wvli3g==
   dependencies:
     expo-cli "^3.3.0"
     request "^2.81.0"
@@ -11342,9 +11342,9 @@ url-parse-lax@^3.0.0:
     prepend-http "^2.0.0"
 
 url-parse@^1.4.3, url-parse@^1.4.4:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
-  integrity sha512-d3uaVyzDB9tQoSXFvuSUNFibTd9zxd2bkVrDRvF5TmvWWQwqE4lgYJ5m+x1DbecWkw+LK4RNl2CU1hHuOKPVlg==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
